@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+    .site-main .banner .container .site-menu ul {
+      flex-direction: column;
+    }
+  
+    .site-main .banner .container .site-menu li {
+      margin-bottom: 10px;
+    }
+
+    .site-main .banner .container .site-menu li:last-child {
+        margin-right: 90px;
+    }
+  }

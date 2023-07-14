@@ -1,0 +1,2213 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Philosopher Bold';
+    src: url(fonts/Philosopher-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Philosopher Regular';
+    src: url(fonts/Philosopher-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'PinyonScript';
+    src: url(fonts/PinyonScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Philosopher italic';
+    src: url(fonts/Philosopher-Italic.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+@font-face {
+    font-family: 'Cinzel Black';
+    src: url(fonts/Cinzel-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Cinzel Bold';
+    src: url(fonts/cinzen/Cinzel-VariableFont_wght.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.container {
+    max-width: 1170px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    max-width: 1920px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.site-header {
+    height: 120px;
+    background: #fff;
+    display: flex;
+    padding: 0 60px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.site-header h2 {
+    font-family: 'Philosopher Bold';
+    font-size: 36px;
+    color: #a53e4c;
+    margin-left: 185px;
+}
+
+.site-header i {
+    font-size: 25px;
+    color: black;
+}
+
+.site-header ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.site-header li {
+    margin-right: 35px;
+}
+
+.site-header li:last-child {
+    margin-right: 0;
+}
+
+.site-header .icons li:last-child {
+    position: relative;
+}
+
+.site-header .shop-buy {
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    right: 0;
+    margin-top: 20px;
+    border-top: 2px dashed #a53e4c;
+    padding: 30px 20px;
+    width: 296px;
+}
+
+.site-header .shop-buy ul {
+    flex-direction: column;
+    position: relative;
+}
+
+.site-header .shop-buy ul li{
+    margin-right: 0;
+}
+
+.site-header .shop-buy ul li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.site-header .shop-buy ul li:last-child {
+    margin-bottom: 0;
+    border-bottom: 2px dashed #a53e4c;
+    padding-bottom: 30px;
+}
+
+.site-header .shop-buy ul li .padding-right{
+    padding: 11px 23px;
+}
+.site-header .shop-buy ul li span{
+    display: block;
+    color: #a53e4c;
+    font-size: 14px;
+    font-family: 'Philosopher Bold';
+    margin-top: 12px;
+}
+
+.site-header .shop-buy ul li p{
+    padding: 0 14px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-family: 'Philosopher Regular';
+    letter-spacing: 3px;
+}
+
+.site-header .shop-buy ul li .fa-xmark {
+    position: relative;
+    bottom: -37px;
+}
+
+#header .fa-dollar-sign {
+    color: #a53e4c;
+    font-size: 14px;
+}
+
+.site-header .shop-buy ul li img{
+    border: 1px solid;
+    padding: 11px 25px;
+}
+
+.site-header .product-total {
+    padding-top: 30px;
+}
+
+.site-header .product-total p {
+    font-size: 18px;
+    color: #000;
+    font-family: 'Philosopher Bold';
+    margin-bottom: 40px;
+}
+
+.site-header .product-total span {
+    color: #a53e4c;
+    float: right;
+    letter-spacing: 2px;
+}
+
+.site-header .product-total button {
+    background-color: #a53e4c;
+    border: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    height: 40px;
+    font-family: 'Philosopher Bold';
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.site-header .product-total a {
+    display: block;
+    background: none;
+    border: 1px solid #000;
+    padding: 7px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Philosopher Bold';
+    letter-spacing: 2px;
+}
+
+.site-header .product-total button:hover, .site-header .product-total a:hover {
+    background: green;
+    color: red;
+}
+
+/*header-menu*/
+
+.site-header .setting {
+    position: relative;
+}
+
+.site-header .setting::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    background: none;
+}
+
+.site-header .site-menu-setting {
+    display: none;
+    position: absolute;
+    max-width: 170px;
+    z-index: 1;
+}
+
+.site-header .site-menu-setting {
+    background: #fff;
+    padding: 0 30px;
+    border-top: 2px dashed #a53e4c;
+    margin-top: 25px;
+}
+
+.site-header .site-menu-setting .list-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+    position: relative;
+}
+
+.site-header .site-menu-setting .list-menu::after {
+    content: "";
+    width: 227%;
+    height: 1px;
+    position: absolute;
+    background-color: #e5e5e5;
+    bottom: 0;
+    left: -40%;
+}
+
+.site-header .site-menu-setting .list-menu a {
+    text-decoration: none;
+    color: #363636;
+    font-family: 'Philosopher Regular';
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.site-header .site-menu-setting a:hover {
+    color: red !important;
+}
+
+.site-header .site-menu-setting .list-menu a:last-child {
+    margin-bottom: 0;
+}
+
+.site-header .site-menu-setting .currency {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+    position: relative;
+}
+
+.site-header .site-menu-setting .currency::after {
+    content: "";
+    width: 227%;
+    height: 1px;
+    position: absolute;
+    background-color: #e5e5e5;
+    bottom: 0;
+    left: -40%;
+}
+
+.site-header .site-menu-setting .currency h3{
+    font-size: 14px;
+    font-family: 'Philosopher Regular';
+    color: #363636;
+    letter-spacing: 2px;
+}
+
+.site-header .site-menu-setting .currency a {
+    text-decoration: none;
+    color: #363636;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.site-header .site-menu-setting .currency a:last-child {
+    margin-bottom: 0px;
+}
+
+.site-header .site-menu-setting .currency i {
+    font-size: 14px;
+    padding-right: 12px;
+}
+
+.site-header .site-menu-setting .list-icons {
+    padding-top: 25px;
+}
+
+.site-header .site-menu-setting .list-icons h3{
+    font-size: 14px;
+    font-family: 'Philosopher Regular';
+    color: #363636;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.site-header .site-menu-setting .list-icons ul {
+    margin-bottom: 20px;
+}
+
+.site-header .site-menu-setting .list-icons ul li{
+    margin-right: 5px;
+}
+
+/* .site-header .setting:hover .site-menu-setting {
+    display: block;
+} */
+
+.site-main .banner .container .site-menu .site-menu-home:hover .menu-home {
+    display: block;
+}
+
+.site-main .banner .container .site-menu .site-menu-shop:hover .menu-shop {
+    display: block;
+}
+
+.site-main .banner .container .site-menu .site-menu-pages:hover .menu-pages {
+    display: block;
+}
+
+.site-main .banner .container .site-menu .site-menu-blogs:hover .menu-blogs {
+    display: block;
+}
+
+.site-main .banner .container .site-menu .menu-contact:hover .site-menu-contact {
+    display: block;
+}
+
+/* .site-main .banner .container .site-menu li:hover div {
+    display: block;
+} */
+
+/* #site-main .site-menu-home:hover .menu-home {
+    display: block;
+} */
+
+/* header-menu-home*/
+.site-main {
+    padding-top: 120px;
+}
+.site-main .banner .container .site-menu .menu-home {
+    position: absolute;
+    background: #fff;
+    color: #000;
+    width: 1140px;
+    justify-content: space-between;
+    padding: 50px 70px;    
+    display: none;
+}
+
+.site-main .banner .container .site-menu .menu-home .col-md-6{
+    display: flex;
+}
+
+.site-main .banner .container .site-menu .menu-home .col-md-6 h4{
+    padding-bottom: 25px;
+    font-size: 14px;
+    color: #000;
+    font-family: 'Philosopher Regular';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.col-md-6 .site-menu-men {
+    margin-right: -25px;
+}
+
+.thumbnail-2 {
+    padding-left: 25px;
+}
+
+.site-main .banner .container .site-menu .menu-home .site-menu-men, .site-main .banner .container .site-menu .menu-home .site-menu-women{
+    display: flex;
+    flex-direction: column;
+}
+
+.site-main .banner .container .site-menu .menu-home ul{
+    padding: 0;
+    display: block;
+}
+
+.site-main .banner .container .site-menu .menu-home ul a{
+    color: #363636;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+.site-main .banner .container .site-menu .menu-home ul a:hover{
+    color: red;
+}
+
+.site-main .banner .container .site-menu .menu-home ul li{
+    margin-bottom: 25px;
+    height: 24px;
+}
+
+.site-main .banner .container .site-menu .menu-home ul li:last-child{
+    margin-right: 90px;
+}
+
+.thumbnail {
+    padding-right: 40px;
+}
+
+.site-menu-women {
+    padding-left: 40px;
+}
+.site-main .banner .container .site-menu .menu-home {
+    top: 100%;
+    right: 30px;
+}
+
+.site-main .banner .container .site-menu .menu-shop .row {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.site-main .banner .container .site-menu .menu-shop .col-md-2 ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.site-main .banner .container .site-menu .menu-shop .col-md-2 ul li {
+    height: 24px;
+    margin-bottom: 28px;
+}
+/* shop-menu*/
+.site-main .banner .container .site-menu .menu-shop h4{
+    padding-bottom: 25px;
+    font-size: 14px;
+    color: #000;
+    font-family: 'Philosopher Regular';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.site-main .banner .container .site-menu .menu-shop ul a{
+    color: #363636;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+.site-main .banner .container .site-menu .menu-shop ul a:hover{
+    color: red;
+}
+
+.site-main .banner .container .site-menu .menu-shop {
+    position: absolute;
+    background: #fff;
+    color: #000;
+    width: 1140px;
+    justify-content: space-between;
+    padding: 50px 70px;    
+    display: none;
+    top: 100%;
+    right: 30px;
+    color: #363636;
+}
+
+.site-main .banner .container .site-menu .menu-shop .col-md-2{
+    padding-left: 70px
+}   
+
+/* css menu-pages*/
+
+.site-main .banner .container .site-menu .menu-pages {
+    position: absolute;
+    background: #fff;
+    color: #000;
+    width: 193px;
+    height: 180px;
+    justify-content: space-between;
+    padding: 20px 15px;    
+    display: none;
+    top: 100%;
+    color: #363636;
+}
+
+.site-main .banner .container .site-menu .menu-pages ul {
+    display: block;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.site-main .banner .container .site-menu .menu-pages ul li{
+    height: 24px;
+    margin-bottom: 15px;
+    margin-right: 0;
+}
+
+.site-main .banner .container .site-menu .menu-pages ul a{
+    color: #363636;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+.site-main .banner .container .site-menu .menu-pages ul a:hover {
+    color: red;
+}
+
+
+
+
+/* */
+.site-main .banner .container .site-menu .menu-blogs {
+    position: absolute;
+    background: #fff;
+    color: #000;
+    width: 193px;
+    height: 330px;
+    justify-content: space-between;
+    padding: 20px 15px;    
+    display: none;
+    top: 100%;
+    color: #363636;
+}
+
+.site-main .banner .container .site-menu .menu-blogs ul {
+    display: block;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.site-main .banner .container .site-menu .menu-blogs ul li{
+    height: 24px;
+    margin-bottom: 15px;
+    margin-right: 0;
+}
+
+.site-main .banner .container .site-menu .menu-blogs ul a{
+    color: #363636;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+.site-main .banner .container .site-menu .menu-blogs ul a:hover{
+    color: red;
+}
+
+/*contact*/
+
+.site-main .banner .container .site-menu .site-menu-contact {
+    position: absolute;
+    top: 100%;
+    background: #fff;
+    display: none;
+}
+
+.site-main .banner .container .site-menu .site-menu-contact ul{
+    padding: 0;
+    margin: 0;
+}
+
+.site-main .banner .container .site-menu .site-menu-contact a{
+    color: #000;
+    padding: 35px;
+}
+
+/* css main */
+
+/* site-search */
+
+.site-search-categories #search-close {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    font-size: 20px;
+    color: #898989;
+}
+
+.site-search-categories #search-close:hover {
+    color: red;
+}
+
+.site-search-categories {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    background: #fff;
+    top: 30%;
+    max-width: 1170px;
+    /* visibility: hidden; */
+    z-index: 1;
+}
+.site-search-categories form {
+    display: flex;
+    position: relative;
+}
+
+
+/* .site-search-categories::before {
+    background-color: #21212D;
+    opacity: 0.7;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 1000px;
+    width: 100%;
+} */
+
+.site-search .search button {
+    padding: 12px 15px;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 7px;
+    font-size: 24px;
+}
+
+.input-form:focus {
+    outline: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+.site-search .categories select{
+    letter-spacing: 3px;
+    font-family: 'Philosopher Bold';
+    position: relative;
+    width: 270px;
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #a53e4c;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+}
+
+
+.site-search .categories input::placeholder{
+    color: #b7b7b7;
+    font-family: 'Philosopher Regular';
+}
+
+.site-search .search {
+    position: relative;
+}
+
+.site-search .search input{
+    position: relative;
+    width: 500px;
+    height: 60px;
+    padding-left: 20px;
+    background: none;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-left: none;
+}
+
+.site-main .content .site-search {
+    display: flex;
+    position: relative;
+}
+/* */
+
+.site-main .banner {
+    background: url(images/assests/banner.jpg);
+    height: 850px;
+    position: relative;
+}
+
+.site-main .banner .container .site-menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.site-main .banner .container .site-menu li {
+    margin-right: 100px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.site-main .banner .container .site-menu li:last-child {
+    margin-right: 0;
+}
+
+.site-main .banner .container .site-menu ul .first{
+    color: red;
+}
+
+.site-main .banner .container .site-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Philosopher Regular';
+    letter-spacing: 3px;
+}
+.site-main .banner .container .site-menu {
+    position: relative;
+}
+
+.site-main .banner .container .site-menu a:hover {
+    color: red;
+}
+
+.site-main .banner .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 760px;
+    padding-left: 60px;
+}
+
+.site-main .banner .container .content .site-shop-now {
+    margin-top: 55px;
+    padding: 13px 41px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Philosopher Bold';
+    background: #a53e4c;
+}
+
+.site-main .banner .container .site-shop-now:hover {
+    background: red;
+    color: #fff;
+}
+
+/* main login */
+.main-login {
+    background: #fff;
+    max-width: 300px;
+    padding: 30px 25px;
+    position: absolute;
+    width: 100%;
+    left: 43.5%;
+    top: 19%;
+    display: none;
+    z-index: 1;
+}
+
+.main-login .site-lg {
+    font-size: 24px;
+    font-family: 'Philosopher Bold';
+    margin-bottom: 0;
+    letter-spacing: 5px;
+}
+
+.main-login .site-lg i {
+    font-size: 35px;
+    float: right;
+    position: relative;
+    bottom: 10px;
+    color: #898989;
+}
+
+.main-login .site-lg i:hover {
+    color: red;
+}
+
+.main-login input {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.main-login input:focus {
+    outline: none;
+}
+
+.main-login input::placeholder {
+    color: #898989;
+    font-size: 18px;
+    font-family: 'Philosopher Regular';
+}
+
+.btn-login {
+    margin-top: 40px;
+    padding: 7px 37px;
+    border-radius: 20px;
+    background: #a53e4c;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    left: 24%;
+}
+
+.btn-login:hover {
+    background: yellow;
+}
+
+.lg-register {
+    font-size: 14px;
+}
+
+.lg-register a{
+    letter-spacing: 0;
+    color: #898989;
+    font-family: 'Philosopher Regular';
+    text-decoration: none;
+}
+
+.forgot-password {
+    float: right;
+    font-size: 14px;
+    padding-right: 25px;
+}
+
+.lg-register a:hover{
+    color: red;
+}
+
+/* đăng ký */
+.main-register {
+    background: #fff;
+    max-width: 300px;
+    padding: 30px 25px;
+    position: absolute;
+    width: 100%;
+    left: 43.5%;
+    top: 21%;
+    display: none;
+    z-index: 1;
+}
+
+.main-register .site-lg {
+    font-size: 24px;
+    font-family: 'Philosopher Bold';
+    margin-bottom: 0;
+    letter-spacing: 5px;
+}
+
+.main-register .site-lg i {
+    font-size: 35px;
+    float: right;
+    position: relative;
+    bottom: 10px;
+    color: #898989;
+}
+
+.main-register .site-lg i:hover {
+    color: red;
+}
+
+.main-register input {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.main-register input:focus {
+    outline: none;
+}
+
+.main-register input::placeholder {
+    color: #898989;
+    font-size: 18px;
+    font-family: 'Philosopher Regular';
+}
+
+.btn-register {
+    margin-top: 40px;
+    padding: 7px 44px;
+    border-radius: 20px;
+    background: #a53e4c;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    left: 18%;
+}
+
+.btn-register:hover {
+    background: yellow;
+}
+
+.lg-login {
+    font-size: 14px;
+}
+
+.lg-login a{
+    letter-spacing: 0;
+    color: #898989;
+    font-family: 'Philosopher Regular';
+    text-decoration: none;
+}
+
+.lg-login a:hover{
+    color: red;
+}
+
+.forgot-password {
+    float: right;
+    font-size: 14px;
+    padding-right: 25px;
+}
+/* */
+
+.site-main .site-contact img {
+    max-width: 100%;
+}
+
+.site-main .site-contact .contact{
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+}
+
+.site-main .site-contact .contact .site-time{
+    border-left: 1px solid #898989;
+    border-right: 1px solid #898989;
+}
+
+.site-main .site-contact .contact ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.site-main .site-contact .contact li{
+    margin-right: 30px;
+}
+
+.site-main .site-contact .contact li:last-child{
+    margin-right: 0;
+}
+
+.site-main .site-contact .contact a{
+    color: #000;
+}
+
+.site-main .site-contact .contact a:hover{
+    color: red;
+}
+
+.site-main .site-contact {
+    min-height: 750px;
+    background: #f4f6f9;
+}
+
+.site-main .site-contact .introduce {
+    text-align: center;
+}
+
+.site-main .site-contact .introduce h3 {
+    font-size: 36px;
+    font-family: "Philosopher Bold";
+    position: relative;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.site-main .site-contact .introduce span{
+    color: #a53e4c;
+    font-weight: 100;
+    font-family: 'PinyonScript';
+}
+
+.site-main .site-contact .introduce p{
+    font-size: 14px;
+    font-family: 'Philosopher Regular';
+    color: #898989;
+    position: relative;
+    line-height: 25px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.site-main .site-contact .introduce .context p::after {
+    display: block;
+    content: "";
+    width: 106px;
+    height: 70px;
+    position: absolute;
+    background: transparent url('images/assests/signature-removebg-preview.png') no-repeat;
+    margin-top: 30px;
+    left: 43%;
+}
+
+.site-main .site-contact .introduce .col-md-6{
+    padding: 0;
+}
+
+.site-main .site-contact .introduce .content-2{
+    height: 592px;
+    padding: 90px 20px;
+}
+
+
+.site-main .site-contact .introduce .picture{
+    position: relative;
+    bottom: 115px;
+}
+
+.site-main .site-contact .introduce .context a {
+    position: relative;
+}
+
+.site-main .site-contact .introduce .context a::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #959595;
+    position: absolute;
+    left: 130%;
+    top: 70%;
+}
+
+.site-main .site-contact .introduce .context a::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #959595;
+    position: absolute;
+    right: 130%;
+    top: 70%;
+}
+
+.contact .col-md-4 {
+    padding: 28px 0;
+}
+
+/* */
+.featured-wines .container {
+    text-align: center;
+    min-height: 1000px;
+}
+
+.featured-wines .container h3 {
+    padding-top: 90px;
+    font-size: 36px;
+    font-family: "Philosopher Bold";
+    position: relative;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.featured-wines .container .icons {
+    position: relative;
+}
+
+.featured-wines .container span{
+    color: #a53e4c;
+    font-weight: 100;
+    font-family: 'PinyonScript';
+}
+
+.featured-wines .container .icons::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    left: 130%;
+    top: 70%;
+}
+
+.featured-wines .container .icons::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    right: 130%;
+    top: 70%;
+}
+
+.featured-wines .container .site-menu {
+    margin-top: 30px;
+}
+
+.featured-wines .container .site-menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.featured-wines .container .site-menu li {
+    margin-right: 50px;
+}
+
+.featured-wines .container .site-menu li:last-child {
+    margin-right: 0;
+}
+
+.featured-wines .container .site-menu a {
+    color: #000;
+    font-size: 14px;
+    font-family: "Philosopher Regular";
+    text-decoration: none;
+}
+
+.featured-wines .container .site-menu a:hover {
+    color: red;
+}
+
+.product {
+    position: relative;
+    max-width: 270px;
+}
+
+.product .product-actions {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+
+.product .product-actions ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.product .product-info p {
+    color: #a53e4c;
+    font-size: 14px;
+    font-family: 'Cinzel Black';
+    letter-spacing: 2px;
+}
+
+.product .product-actions ul i{
+    font-size: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    padding: 13px;
+    color: #898989;
+}
+
+.product .product-actions ul i:hover{
+    background: red;
+    color: #fff;
+}
+
+.product:hover .product-actions {
+    display: block;
+}
+
+.product:hover .product-info {
+    display: none;
+}
+
+.product .product-thumb {
+  display: block;
+  max-width: 270px;
+  height: 360px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  line-height: 360px;
+}
+
+.product .product-thumb img {
+  vertical-align: middle;
+}
+
+.product .product-info {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: 100%;
+}
+
+.start-rating {
+  display: inline-block;
+  float: left;
+}
+
+.start-rating i {
+    color: #898989;
+}
+
+.featured-wines .container span:hover {
+    background: red !important;
+}
+
+.start-rating a:hover {
+    color: red;
+    background: #000;
+}
+
+.product-info p{
+  display: inline-block;
+  float: right;
+}
+
+.product .product-info h4 a{
+    font-size: 14px;
+    color: #898989;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    font-family: 'Philosopher Regular';
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.product::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 70%;
+    background: none;
+}
+
+.site-main .featured-wines .site-center .click-all a:hover {
+    background-color: red;
+    color: #fff;
+}
+
+
+.site-main .featured-wines .click-all a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 1px solid #898989;
+    border-radius: 20px;
+    font-family: 'Philosopher Regular';
+    padding: 12px 48px;
+}
+
+.site-main .featured-wines .click-all {
+    margin-top: 155px;
+}
+
+.site-main .featured-wines .click-all a:hover {
+    background-color: red;
+    color: white;
+}
+
+.site-main #countdown {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 65px;
+    margin-bottom: 70px;
+}
+
+.site-main #countdown li {
+    background: url(images/assests/khung.png) no-repeat;
+    min-height: 137px;
+    display: flex;
+    flex-direction: column;
+    min-width: 97px;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-main #countdown li a {
+    font-family: 'Cinzel Black';
+    font-size: 30px;
+}
+
+.site-main .deal-of-week {
+    text-align: center;
+    padding-right: 40px;
+}
+
+.site-main .deal-of-week .background img {
+    max-width: 1850px;
+}
+
+.site-main .deal-of-week .row{
+    justify-content: space-between;
+}
+
+.site-main .deal-of-week .context{
+    font-size: 16px;
+    font-family: 'Philosopher Regular';
+    color: #898989;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.site-main .deal-of-week h3 {
+    font-size: 36px;
+    font-family: "Philosopher Bold";
+    position: relative;
+    letter-spacing: 7px;
+    margin-bottom: 20px;
+}
+
+.site-main .deal-of-week .icons {
+    position: relative;
+}
+
+.site-main .deal-of-week span{
+    color: #a53e4c;
+    font-weight: 100;
+    font-family: 'PinyonScript';
+}
+
+.site-main .deal-of-week .icons::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    left: 166%;
+    top: 70%;
+}
+
+.site-main .deal-of-week .icons::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    right: 152%;
+    top: 70%;
+}
+
+.site-main .deal-of-week .col-md-6 {
+    padding: 95px 0;
+}
+
+.site-main .deal-of-week .shop-now {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 1px solid #898989;
+    border-radius: 20px;
+    font-family: 'Philosopher Regular';
+    padding: 12px 48px;
+}
+
+.site-main .deal-of-week .shop-now:hover {
+    color: #fff;
+    background: red;
+}
+
+.site-main .deal-of-week .tomatin {
+    width: 371px;
+    background: #fff;
+    height: 506px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-main .row {
+    display: flex;
+    align-items: center;
+}
+
+.owl-carousel .owl-item img {
+    display: inline-block;
+    width: 95px;
+    max-height: 286px;
+}
+
+.owl-theme .owl-nav {
+    margin-top: 10px;
+    display: none;
+}
+
+.owl-theme .owl-dots {
+    position: relative;
+    top: 75px;
+}
+
+/* */
+.site-main .all-alcohol .container .row .product-actions {
+    display: none;
+    margin-top: 10px;
+}
+.site-main .all-alcohol .container .row .product-actions ul {
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-main .all-alcohol .container .row .product-actions ul i {
+    font-size: 25px;
+    border: 1px solid #e5e5e5;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.site-main .all-alcohol .container .row .product-actions ul i:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.site-main .all-alcohol .container {
+    height: 900px;
+    padding: 90px 0;
+    box-sizing: border-box;
+}
+
+.site-main .all-alcohol .container .row .col-md-4:hover .product-actions{
+    display: block;
+}
+
+.site-main .all-alcohol .container .row .col-md-4:hover p{
+    display: none;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 figure {
+    margin: 0;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 figure img{
+    border: 1px solid #e5e5e5;
+    padding: 15px 36px;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 figure .red{
+    border: 1px solid #a53e4c;
+    padding: 15px 29px;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 h4 a {
+    font-size: 18px;
+    font-family: 'Philosopher Regular';
+    color: #898989;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 h4 a:hover {
+    color: red;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 i {
+    font-size: 12px;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 a {
+    color: #000;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 p {
+    color: #a53e4c;
+    font-family: 'Cinzel Black';
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 p i{
+    font-size: 18px;
+}
+
+.site-main .all-alcohol .container .row .col-md-4 figcaption {
+    padding: 5px 20px
+}
+
+.site-main .all-alcohol .container .title .col-md-4 i {
+    font-size: 20px;
+}
+
+.site-main .all-alcohol .container .title .col-md-4 .link {
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.site-main .all-alcohol .container .title .col-md-4 {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 55px;
+}
+
+.site-main .all-alcohol .container .title .col-md-4 a{
+    color: #363636;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.site-main .all-alcohol .container .title .col-md-4 a:hover{
+    color: red;
+}
+
+.site-main .all-alcohol .container .title .col-md-4::after{
+    content: "";
+    position: absolute;
+    width: 23%;
+    height: 1px;
+    background: #e5e5e5;
+    right: 20%;
+}
+
+.site-main .event-wines .container .row {
+    justify-content: space-between;
+}
+
+.site-main .event-wines .container .row .col-md-2 {
+    text-align: right;
+}
+
+.site-main .event-wines .container .row .col-md-2 h4 {
+    color: #a53e4c;
+    font-size: 36px;
+    font-family: 'Cinzel Bold';
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.site-main .event-wines .container .row .col-md-2 p {
+    font-size: 14px;
+    color: #b7b7b7;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.site-main .event-wines {
+    background: url(images/assests/background-event.jpg);
+    min-height: 965px;
+}
+
+.site-main .event-wines .container .row .col-md-3 h4{
+    font-size: 36px;
+    color: #a53e4c;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.site-main .event-wines .container .row .col-md-3 p{
+    font-size: 18px;
+    color: #b7b7b7;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.site-main .event-wines .container .row .col-md-5 p{
+    font-size: 14px;
+    color: #6a5e56;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.site-main .event-wines .container .row .col-md-5 h5 a{
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Cinzel Bold';
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-main .event-wines .container .row .col-md-5 h5 a:hover{
+    color: red;
+}
+
+
+.site-main .event-wines nav h3 {
+    font-size: 36px;
+    font-family: "Philosopher Bold";
+    position: relative;
+    letter-spacing: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.site-main .event-wines nav .icons {
+    position: relative;
+}
+
+.site-main .event-wines nav span{
+    color: #a53e4c;
+    font-weight: 100;
+    font-family: 'PinyonScript';
+}
+
+.site-main .event-wines nav .icons::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    left: 152%;
+    top: 70%;
+}
+
+.site-main .event-wines .container {
+    padding: 95px 0;
+}
+
+.site-main .event-wines nav .icons::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    right: 163%;
+    top: 70%;
+}
+
+.site-main .event-wines nav {
+    text-align: center;
+    position: relative;
+    left: -31px;
+}
+
+.site-main .event-wines .container .row-1 .col-md-3 h4 {
+    position: relative;
+}
+
+.site-main .event-wines .container .row-1 .col-md-3 h4::after {
+    content: "08";
+    font-size: 100px;
+    color: rgb(255, 255, 255, 0.1);
+    position: absolute;
+    font-family: 'Cinzel Black';
+    top: -46px;
+    left: 37px;
+}
+
+.site-main .event-wines .container .row-2 .col-md-3 h4 {
+    position: relative;
+}
+
+.site-main .event-wines .container .row-2 .col-md-3 h4::after {
+    content: "14";
+    font-size: 100px;
+    color: rgb(255, 255, 255, 0.1);
+    position: absolute;
+    font-family: 'Cinzel Black';
+    top: -46px;
+    left: 37px;
+}
+
+.site-main .event-wines .container .row-3 .col-md-3 h4 {
+    position: relative;
+}
+
+.site-main .event-wines .container .row-3 .col-md-3 h4::after {
+    content: "26";
+    font-size: 100px;
+    color: rgb(255, 255, 255, 0.1);
+    position: absolute;
+    font-family: 'Cinzel Black';
+    top: -46px;
+    left: 37px;
+}
+
+.site-main .event-wines .row {
+    margin-top: 65px;
+}
+
+.col-md-3, .col-md-5, .col-md-2 {
+    padding: 0;
+}
+
+.site-main .event-wines .row-1 {
+    border-top: 1px dashed #6a5e56;
+    padding-top: 75px;
+    margin-top: 60px;
+}
+
+.site-main .event-wines .row-3 {
+    border-bottom: 1px dashed #6a5e56;
+    padding-bottom: 65px;
+}
+
+/* */
+.site-main .blog-wines .container h4 {
+    font-size: 30px;
+    color: #a53e4c;
+    text-transform: uppercase;
+    font-family: 'Philosopher Regular';
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.site-main .blog-wines .container p a{
+    font-size: 18px;
+    color: #363636;
+    font-family: 'Philosopher Regular';
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.site-main .blog-wines .container .end {
+    text-align: right;
+}
+
+
+/* .site-main .blog-wines .container .end h4 {
+    text-align: center;
+} */
+
+.site-main .blog-wines .container .row {
+    align-items: end;
+}
+
+.site-main .blog-wines .container .row .img {
+    margin-top: 30px;
+}
+
+.site-main .blog-wines .container {
+    min-height: 820px;
+    padding-top: 90px;
+}
+
+.site-main .blog-wines .container .row .continue{
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #898989;
+}
+
+.site-main .blog-wines .container .row a:hover{
+    color: red;
+}
+
+.site-main .blog-wines .container h3 {
+    font-size: 36px;
+    font-family: "Philosopher Bold";
+    position: relative;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.site-main .blog-wines .container .icons {
+    position: relative;
+}
+
+.site-main .blog-wines .container span{
+    color: #a53e4c;
+    font-weight: 100;
+    font-family: 'PinyonScript';
+}
+
+.site-main .blog-wines .container .icons::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    left: 130%;
+    top: 70%;
+}
+
+.site-main .blog-wines .container .icons::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: absolute;
+    right: 130%;
+    top: 70%;
+}
+
+.site-main .blog-wines .container nav {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.site-main .blog-wines .container .site-aug {
+    position: relative;
+}
+
+.site-main .blog-wines .container .site-aug::before {
+    content: "08";
+    font-size: 72px;
+    color: rgb(0, 0, 0, 0.1);
+    position: absolute;
+    font-family: 'Philosopher Regular';
+    top: -24px;
+    left: 44px;
+    letter-spacing: 10px;
+}
+
+.site-main .blog-wines .container .oct {
+    position: relative;
+    text-align: center;
+    padding-left: 69px;
+}
+
+.site-main .blog-wines .container .oct::before {
+    content: "03";
+    font-size: 72px;
+    color: rgb(0, 0, 0, 0.1);
+    position: absolute;
+    font-family: 'Philosopher Regular';
+    top: -26px;
+    right: 0;
+    letter-spacing: 10px;
+}
+
+.site-main .blog-wines .container .oct-2 {
+    position: relative;
+}
+
+.site-main .blog-wines .container .oct-2::before {
+    content: "24";
+    font-size: 72px;
+    color: rgb(0, 0, 0, 0.1);
+    position: absolute;
+    font-family: 'Philosopher Regular';
+    top: -24px;
+    left: 44px;
+    letter-spacing: 10px;
+}
+
+.site-main .blog-wines .container .dec {
+    position: relative;
+    text-align: center;
+    padding-left: 69px;
+}
+
+.site-main .blog-wines .container .dec::before {
+    content: "28";
+    font-size: 72px;
+    color: rgb(0, 0, 0, 0.1);
+    position: absolute;
+    font-family: 'Philosopher Regular';
+    top: -26px;
+    right: 0;
+    letter-spacing: 10px;
+}
+
+.footer .footer-top section {
+    padding: 0 70px;
+}
+
+.footer .footer-top ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-top li {
+    margin-right: 40px;
+}
+
+.footer .footer-top a {
+    color: #fff;
+}
+
+.footer .footer-top i:hover {
+    color: red;
+}
+
+.footer .footer-top i {
+    color: #fff;
+}
+
+.footer .footer-top {
+    background: #252525;
+    height: 60px;
+}
+
+
+.footer .footer-top section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .footer-top section li{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-top section ul li:last-child{
+    margin-right: 0;
+}
+
+.footer .footer-top section .logo li{
+    margin-right: 10px;
+}
+
+.footer .footer-top section .logo li i{
+    font-size: 30px;
+    color: #959595;
+}
+
+.footer .footer-bootom section .tag-clound {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 20px;
+}
+
+.footer .footer-bootom h6 {
+    font-size: 14px;
+    font-family: 'Philosopher Regular';
+    color: #fff;
+    letter-spacing: 3px;
+    margin-bottom: 45px !important;
+}
+
+.footer-bootom .mt-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0 !important;
+}
+
+.footer .footer-bootom {
+    background: #000;
+}
+
+.footer .footer-bootom section .tag-clound li {
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.footer .footer-bootom .tag-clound a {
+    border: 1px solid;
+    padding: 10px 32px;
+    text-decoration: none;
+    color: #898989;
+    font-size: 14px;
+}
+
+.footer .footer-bootom .tag-clound a:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.footer .footer-bootom p{
+    color: #898989;
+    font-size: 14px;
+}
+
+.footer .footer-bootom a{
+    color: #898989;
+    text-decoration: none;
+}
+
+.footer .footer-bootom .container {
+    min-height: 520px;
+    padding: 100px 0;
+}
+
+.footer .footer-bootom .container .address{
+    line-height: 35px;
+}
+
+.footer .footer-bootom .container h5 a{
+    font-size: 36px;
+    color: #a53e4c;
+    font-family: 'Philosopher Bold';
+    letter-spacing: 8px;
+    text-decoration: none;
+}
+
+.footer .footer-bootom .container h5 a:hover {
+    color: blue;
+}
+
+.footer .footer-bootom .container .vine {
+    position: relative;
+    bottom: 20px;
+}
+
+.footer .footer-bootom .container nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.footer .footer-bootom .container nav ul::after {
+    content: "";
+    width: 111%;
+    height: 1px;
+    background: #898989;
+    position: absolute;
+    left: -74px;
+    top: 50px;
+}
+
+.footer .footer-bootom .container nav li {
+    margin-right: 28px;
+    border-right: 1px solid #898989;
+    padding-right: 28px;
+}
+
+.footer .footer-bootom .container nav li:last-child {
+    border: 0;
+}
+
+.footer .footer-bootom .container nav a {
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.site-address {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer a:hover {
+    color: red;
+}
+
+/* */
+.hidden {
+    display: none;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.price {
+    position: relative;
+}
+
+.price::after {
+    position: absolute;
+    content: "\24 215.00";
+    background: url(images/assests/red.png);
+    padding: 12px 33px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Font Awesome 6 Solid";
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    font: var(--fa-font-solid);
+    top: 60px;
+    left: 13px;
+}
+
+.price-1 {
+    position: relative;
+}
+
+.price-1::after {
+    position: absolute;
+    content: "\24 215.00";
+    background: url(images/assests/red.png);
+    padding: 12px 33px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Font Awesome 6 Solid";
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    font: var(--fa-font-solid);
+    top: 60px;
+    left: 6px;
+}
+
+.price-2 {
+    position: relative;
+}
+
+.price-2::after {
+    position: absolute;
+    content: "\24 215.00";
+    background: url(images/assests/red.png);
+    padding: 12px 33px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Font Awesome 6 Solid";
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    font: var(--fa-font-solid);
+    top: 60px;
+    left: 3px;
+}
+
+.product-sale {
+    position: relative;
+}
+
+.product-sale::after {
+    position: absolute;
+    content: "Sale";
+    background: url(images/assests/sale.png);
+    color: #fff;
+    font-size: 11px !important;
+    box-sizing: border-box;
+    font: var(--fa-font-solid);
+    top: 20px;
+    right: 0;
+    padding: 7px 19px;
+}
+
+.product-new {
+    position: relative;
+}
+
+.product-new::after {
+    position: absolute;
+    content: "New";
+    background: url(images/assests/new.png);
+    color: #fff;
+    font-size: 11px !important;
+    box-sizing: border-box;
+    font: var(--fa-font-solid);
+    top: 20px;
+    left: 0;
+    padding: 7px 19px;
+}
+
+/* .item {
+    display: none;
+  }
+  
+  .item.hidden {
+    display: none !important;
+  } */
